@@ -1,4 +1,4 @@
-# Leanheat connector tests
+# Signspace connector tests
 
 ## System requirements
 
