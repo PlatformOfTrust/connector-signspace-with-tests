@@ -84,13 +84,6 @@ const handleError = async (config, err) => {
         return promiseRejectWithError(err.statusCode, err.message);
     }
 
-    // Execute onerror plugin function.
-    for (let i = 0; i < config.plugins.length; i++) {
-        if (!!config.plugins[i].onerror) {
-            return await config.plugins[i].onerror(config, err);
-        }
-    }
-
     // Give up.
     return promiseRejectWithError(err.statusCode, 'Internal Server Error.');
 };
@@ -166,13 +159,6 @@ const requestData = async (config, path, index) => {
                     options.query.push(config.generalConfig.query.properties[property]);
                 }
             }
-        }
-    }
-
-    // Execute request plugin function.
-    for (let i = 0; i < config.plugins.length; i++) {
-        if (!!config.plugins[i].request) {
-            options = await config.plugins[i].request(config, options);
         }
     }
 

@@ -8,8 +8,6 @@ const SignatureStrategy = require('./strategies/signature').SignatureStrategy;
 
 /**
  * Passport authentication configurations.
- *
- * Configures strategies, which are extensible set of plugins.
  */
 
 /** Import Platform of Trust definitions. */

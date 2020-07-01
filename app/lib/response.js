@@ -79,13 +79,6 @@ function getValueFromResponse(config, path, object, key) {
  * @return {Promise}
  */
 const handleData = async (config, path, index, data) => {
-    // Execute response plugin function.
-    for (let i = 0; i < config.plugins.length; i++) {
-        if (!!config.plugins[i].response) {
-            data = await config.plugins[i].response(config, data);
-        }
-    }
-
     // Validate data object.
     if (!_.isObject(data)) return Promise.resolve();
     if (Object.keys(data).length === 0) return Promise.resolve();
@@ -149,13 +142,6 @@ const handleData = async (config, path, index, data) => {
                 }
             });
 
-            // Execute data plugin function.
-            for (let i = 0; i < config.plugins.length; i++) {
-                if (!!config.plugins[i].data) {
-                    measurement.data = await config.plugins[i].data(config, measurement.data);
-                }
-            }
-
             // Check for objects to be included to every measurement.
             if (config.generalConfig.include) {
                 _.forIn(config.generalConfig.include, function (value, key) {
@@ -203,13 +189,6 @@ const handleData = async (config, path, index, data) => {
             mergedData[j][DATA || 'data'] =
                 mergedData[j][DATA || 'data']
                     .sort((a, b) => a[TIMESTAMP || 'timestamp'] - b[TIMESTAMP || 'timestamp']);
-
-            // Execute id plugin function.
-            for (let i = 0; i < config.plugins.length; i++) {
-                if (!!config.plugins[i].id) {
-                    mergedData[j][ID || 'id'] = await config.plugins[i].id(config, mergedData[j][ID || 'id']);
-                }
-            }
 
         }
     } catch (err) {
