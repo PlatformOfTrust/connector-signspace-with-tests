@@ -10,6 +10,18 @@ const defaultKeySize = 4096;
 const publicKeyURLs = [
     /** Primary keys. */
     {
+        env: 'production',
+        url: 'https://static.oftrust.net/keys/translator.pub'
+    },
+    {
+        env: 'sandbox',
+        url: 'https://static-sandbox.oftrust.net/keys/translator.pub'
+    },
+    {
+        env: 'staging',
+        url: 'https://static-staging.oftrust.net/keys/translator.pub'
+    },
+    {
         env: 'static-test',
         url: 'https://static-test.oftrust.net/keys/translator.pub'
     }

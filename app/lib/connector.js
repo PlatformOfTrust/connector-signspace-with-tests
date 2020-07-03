@@ -16,9 +16,6 @@ if (process.env.NODE_ENV !== 'production') {
 // Set directories.
 const configsDir = './config';
 
-// Make sure directories for templates, protocols, configs and plugins exists.
-if (!fs.existsSync(configsDir)) fs.mkdirSync(configsDir);
-
 /**
  * Connector library.
  *
