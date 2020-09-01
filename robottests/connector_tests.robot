@@ -28,7 +28,6 @@ ${LIMIT}                     5
 ${OFFSET}                    0
 ${QUERY_TEXT}
 @{FILTER}                    
-@{DATA_TYPES}                Temperature
 &{BROKER_BODY_PARAMETERS}    idOfficial=${ID_OFFICIAL}
 ...                          country=${COUNTRY_CODE}
 ...                          status=@{STATUSES}
