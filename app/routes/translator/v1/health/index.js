@@ -10,7 +10,7 @@ const ctrl = require('../../../../controllers/status');
  */
 module.exports = function () {
     /** Platform of Trust health endpoint. */
-    router.get('', ctrl.healthCheck);
+    router.post('', ctrl.healthCheck);
 
     return router;
 };

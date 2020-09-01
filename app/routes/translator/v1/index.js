@@ -16,7 +16,7 @@ const rsa = require('../../../lib/rsa');
 module.exports = function (passport) {
 
     /** Public key. */
-    router.get('/public.key', rsa.sendPublicKey);
+    router.post('/public.key', rsa.sendPublicKey);
 
     /** Status.
      *
@@ -30,7 +30,7 @@ module.exports = function (passport) {
      *       200:
      *         description: Server up and running.
      */
-    router.use('/health/', require('./health')(passport));
+    router.use('/health/', require('./health/index')(passport));
 
     /** Translator.
      *
@@ -44,7 +44,7 @@ module.exports = function (passport) {
      *       200:
      *         description: Data fetched successfully.
      */
-    router.use('/fetch/', require('./fetch')(passport));
+    router.use('/fetch/', require('./fetch/index')(passport));
 
     /** Swagger documentation. */
     router.get('/swagger.json', function (req, res) {

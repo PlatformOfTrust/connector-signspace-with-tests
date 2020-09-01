@@ -16,8 +16,8 @@ module.exports.app = function (app, passport) {
 
     /** Default endpoint. */
     app.use('', function (req, res) {
-        return res.json({
-            message: 'Hello there!',
+        return res.status(404).json({
+            message: 'Signspace Connector - invalid endpoint.',
         });
     });
 };
