@@ -16,7 +16,7 @@ const rsa = require('../../../lib/rsa');
 module.exports = function (passport) {
 
     /** Public key. */
-    router.post('/public.key', rsa.sendPublicKey);
+    router.get('/public.key', rsa.sendPublicKey);
 
     /** Status.
      *
