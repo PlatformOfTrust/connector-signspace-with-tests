@@ -11,7 +11,7 @@ const router = require('express').Router();
 module.exports = function (passport) {
 
     /** V1 endpoints. */
-    router.use('/v1/', require('./v1/index')(passport));
+    router.use('/v1/', require('./v1')(passport));
 
     return router;
 };

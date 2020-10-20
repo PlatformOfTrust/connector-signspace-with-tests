@@ -30,7 +30,7 @@ module.exports = function (passport) {
      *       200:
      *         description: Server up and running.
      */
-    router.use('/health/', require('./health/index')(passport));
+    router.use('/health/', require('./health')(passport));
 
     /** Translator.
      *
@@ -44,7 +44,7 @@ module.exports = function (passport) {
      *       200:
      *         description: Data fetched successfully.
      */
-    router.use('/fetch/', require('./fetch/index')(passport));
+    router.use('/fetch/', require('./fetch')(passport));
 
     /** Swagger documentation. */
     router.get('/swagger.json', function (req, res) {
