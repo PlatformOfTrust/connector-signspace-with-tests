@@ -1,5 +1,5 @@
 {
-  "name": "connector-dev",
+  "name": "connector-signspace-with-tests",
   "version": "1.0.0",
   "description": "HTTP server to handle Platform of Trust Broker API requests.",
   "main": "server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/polku-public/connector-dev.git"
+    "url": "git+https://github.com/PlatformOfTrust/connector-signspace-with-tests.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/polku-public/connector-dev/issues"
+    "url": "https://github.com/PlatformOfTrust/connector-signspace-with-tests/issues"
   },
-  "homepage": "https://gitlab.com/polku-public/connector-dev#readme",
+  "homepage": "https://github.com/PlatformOfTrust/connector-signspace-with-tests/blob/master/README.md",
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
