@@ -28,7 +28,6 @@ ${LIMIT}                     5
 ${OFFSET}                    0
 ${QUERY_TEXT}
 @{FILTER}                    
-@{DATA_TYPES}                Temperature
 &{BROKER_BODY_PARAMETERS}    idOfficial=${ID_OFFICIAL}
 ...                          country=${COUNTRY_CODE}
 ...                          status=@{STATUSES}
@@ -62,7 +61,7 @@ fetch, 200
     ${body}               Get Body
     Fetch Data Product    ${body}
     Integer     response status                                                 200
-    String      response body @context                                          https://standards-ontotest.oftrust.net/v2/Context/DataProductOutput/Document/Signing/SignSpace/
+    String      response body @context                                          https://standards.oftrust.net/v2/Context/DataProductOutput/Document/Signing/SignSpace/
     # First task fetch tests
     String      response body data signing 0 url                                https://signspace.beta.tilaajavastuu.fi/signing/5eda1409d5ca82017ea96a66
     Number      response body data signing 0 digitalSignaturesRequestedCount    1

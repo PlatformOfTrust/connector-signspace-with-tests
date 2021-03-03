@@ -29,7 +29,7 @@ const publicKeyURLs = [
 
 /** Context URLs. */
 const contextURLs = {
-    DataProduct: 'https://standards-ontotest.oftrust.net/v2/Context/DataProductOutput/Document/Signing/SignSpace/'
+    DataProduct: 'https://standards.oftrust.net/v2/Context/DataProductOutput/Document/Signing/SignSpace/'
 };
 
 /**

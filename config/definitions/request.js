@@ -84,7 +84,7 @@ const supportedParameters = {
         required: false
     },
     [definitions.SIGNSPACE_TAG_FILTER] : {
-        required: false
+        required: true
     },
     [definitions.PRODUCT_CODE] : {
         required: false
